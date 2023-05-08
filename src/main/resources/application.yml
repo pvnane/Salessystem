@@ -1,0 +1,32 @@
+server:
+  port: 9999
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost:3306/x-mall?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2b8
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+  level:
+    com:
+      example:
+        mapper:
+          debug
+
+alipay:
+
+  appId: 2021000121689324
+  appPrivateKey: MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCk79seH51KKOWxCjUvudIiVAeRfE5D6qtA1gp0B7pm1j6Z5wTAvrw51eVkaxx0E/FAem6H92tx4iq0TOD7tjL2UYYAV5BHUgiJ9sidSQluSJa81XaBSftX3sSQCY2jrJ0nHZj945S40q2MyATUafJZ4Rs7H+4mCtxvZz4CS3FL6Uq6akJB40AshfGXm2QQRScIg2vc0dfRSRY063d07N2KWsYAaKvlEAc/Ww/J8rRNL7zZXksiQCNmjFisHaSW378aRA0A90aBXxfhSWQuJN4PPuNyE7Y+lo9WT5aiuLXMMUEx3lF+nKQvZF3pE3w+gOvYMSzWpp61C6rpy/b6ksLBAgMBAAECggEBAJdbWPwKzP+aCjZuBKLYZkKEVDGpHfVra15jTVJvKRpn7yiyfIUYQ4jbhdeiB4lqJ5EhCT+SyLHId6HfjvLOn3O1GkBEGq2oVReuNSlJNfNTf6ioR0icCJ/5WO5JJgaWR9z2Z0hNyVPWWdcAUpZO50ydq6yVP6j/fIxq9NeMPdsHMG1ZgTwO0qSlYYC4/9STcsQJ7HO5IAgTZm2mGgDTxXwFCrl4CWmR6rMtICvhSuSb7uKpMZTQvCJ5+9CW/YvDOb8W2ONdWYRgCZP0XKTI6sKI33ZwxaK2aj9H3lHbQIupQ4OV2f2dtrF1NVg7Ga+S8TxvA4EVVhHIHzDtzA0ZIMUCgYEA2k3N4YTrWhPn4u+Y78y5QFBY+XD7t9pzvg7MomUXAuA+8xDoXdiOykXh1dchuoZ33yl/uK7POKzL80Hpb414XvQXtzv0+j06OVNzVi8qqDuRj0mNZ4plWzZlRkWMPKLeqo75capnA9mmQ9pUj3aKe3Dwg87NTYi3vMBUBt+O5HsCgYEAwWryYITHuAqULmBihCSctIF2+bVAvhgY7NwH7KTiJnwtUv6+zT1YKhvLtvq9gJ6HDX21ZF9dhP2NGiRPcwGcX4Wks2ggqC1fbbBLSgXZeWUs9v3Kfp57pgjGjABAqTK/Z6+aVnOfbtEB6UmB1FLeIDXfzNdwRCfg+q9T7k4vBvMCgYEA0iVzu1So+t2Oq/bZ0n3RFwhBnl4U8rdoE91LQEjwDeSwtGviQ/Tj//OloqSl41juq/TW7oHZGUW+Tz1z6d7VsRJoggtFmF64XdbngF+HQMuXI8g6RyICz/tdInhwty5SCv33QmQ3Jo2ucEMMg84pIQtnfHrnR2wE875xJOywMWECgYEAvWIkVRFuJOxmz0oc7FqU/cFOZ45sCDW8IiAHulRwA1LPZlZ9KKUKMKDqxQ2ag9e1USZneBJQlalWgeRPzsIjBPzsmaY5Y7KZn+NgtOgpWs4QSv+RSI2RcK9jCS4uIf3IoJO2wTORRoZsIqqQ7v788/kMW5wPFw0dIxiNS+dN8LUCgYA8Ltu9GzuQAxSFbHyZgMD4Q01DStOn5T9Dy0eKCvnBPhibGUmAxp8ALeDZfiAmxZZ7jMKT9PReUTzN2DxiKrCberw2VVl9Mv2q0d8QUJiIzRwWceiw9rt82q0HOzQbgB6vDvi+dbwVP+tyhVsUy8IuEpJBTJe8+abqrl5sXYKA+w==
+  alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApErOW7BROfNKvWtHapirTspxQgbdVriMEa2wrdYKesiUuaEwsq4fBI5rGlklnqgnSH/8KzTqGjjB3ftNTAMfpJ9dPDhkxFsxypTlvJKyBBK3Z49520pKxkdbD7Vq1OkcYrPXKx7/ZNhQq+o/P/jy3BMcoJTDIGjdJz5XJh9MaRByQLu41Jxx09owosDJwbv/5UFj/PFnifaB4sJZJ7nPCLsF97nYUc1gaVbj8Z+3ddkeqVVH4DHSiZY3FKxZ1YzX7RY8h7BJ8G9AdPcsTpt3Mk7w6JzqHv5ghTaqZ5nrb2pxLSLa5SiFjvmS3zh+mkjdoiu22UPGY234GZbu9W01gQIDAQAB
+  notifyUrl:         http://4ucmgh.natappfree.cc/alipay/notify
+  returnUrl:    http://localhost:8001/front/order
